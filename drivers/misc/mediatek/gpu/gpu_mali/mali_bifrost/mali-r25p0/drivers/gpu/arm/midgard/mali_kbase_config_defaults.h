@@ -103,7 +103,7 @@ enum {
  * -# Power off the entire GPU
  */
 #ifndef DEFAULT_PM_GPU_POWEROFF_TICK_NS
-#define DEFAULT_PM_GPU_POWEROFF_TICK_NS (600000) /* 600us */
+#define DEFAULT_PM_GPU_POWEROFF_TICK_NS (400000) /* 400us */
 #endif
 
 /**
@@ -137,12 +137,12 @@ enum {
 /**
  * Default minimum number of scheduling ticks before jobs are hard-stopped
  */
-#define DEFAULT_JS_HARD_STOP_TICKS_SS    (70) /* 7s */
+#define DEFAULT_JS_HARD_STOP_TICKS_SS    (50) /* 5s */
 
 /**
  * Default minimum number of scheduling ticks before CL jobs are hard-stopped.
  */
-#define DEFAULT_JS_HARD_STOP_TICKS_CL    (70) /* 7s */
+#define DEFAULT_JS_HARD_STOP_TICKS_CL    (50) /* 5s */
 
 /**
  * Default minimum number of scheduling ticks before jobs are hard-stopped
@@ -197,7 +197,7 @@ enum {
  * is enabled the value will be read from there, otherwise this should be
  * overridden by defining GPU_FREQ_KHZ_MAX in the platform file.
  */
-#define DEFAULT_GPU_FREQ_KHZ_MAX (1000000)
+#define DEFAULT_GPU_FREQ_KHZ_MAX (5000)
 
 /**
  * Default timeout for task execution on an endpoint
@@ -216,7 +216,7 @@ enum {
  * that can be used up before the driver switches to incremental rendering,
  * in 256ths. 0 means disable incremental rendering.
  */
-#define DEFAULT_IR_THRESHOLD (256)
+#define DEFAULT_IR_THRESHOLD (192)
 
 #endif /* _KBASE_CONFIG_DEFAULTS_H_ */
 
